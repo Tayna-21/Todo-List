@@ -1,0 +1,29 @@
+<!DOCTYPE HTML5>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="todo list" content="todo list stored in cookie storage">
+    <title>"Todo List"</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header><a href="https://foxminded.ua" target="_blank"><img src="./logo/logo.svg" alt="Logo"></a></header>
+      <div class="container">
+        <div class="input_container">
+          <input type="text" id="input_field">
+          <button type="button" id="input_btn" data-action="save">Save</button>
+        </div>
+        <ul id="list">
+          <!-- Data from Js -->
+        </ul>
+      </div>
+      <footer>
+        <button type="button" id="delete_all"><i class="fa-solid fa-trash"></i>clean items</button>
+      </footer>
+    </div>
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/cookies.js"></script>
+  </body>
+</html>
