@@ -132,9 +132,9 @@ const createTodoList = () => {
               let itemToDelete;
               let indexOfItemToDelete;
 
-              if (itemToDelete = arrayOfCookiesAndSavedItems.find(item => item.id === deleteItemBtnId)) {
-                  indexOfItemToDelete = arrayOfCookiesAndSavedItems.findIndex(item => item.id === deleteItemBtnId);
-                  arrayOfCookiesAndSavedItems.splice(indexOfItemToDelete, 1);
+              if (itemToDelete = arrayOfUnsavedItems.find(item => item.id === deleteItemBtnId)) {
+                  indexOfItemToDelete = arrayOfUnsavedItems.findIndex(item => item.id === deleteItemBtnId);
+                  arrayOfUnsavedItems.splice(indexOfItemToDelete, 1);
 
                   setCookie(arrayOfCookiesAndSavedItems);
               };
@@ -142,6 +142,20 @@ const createTodoList = () => {
               if (itemToDelete = arrayOfCookiesAndUnsavedItems.find(item => item.id === deleteItemBtnId)) {
                   indexOfItemToDelete = arrayOfCookiesAndUnsavedItems.findIndex(item => item.id === deleteItemBtnId);
                   arrayOfCookiesAndUnsavedItems.splice(indexOfItemToDelete, 1);
+
+                  setCookie(arrayOfCookiesAndSavedItems);
+              };
+
+              if (itemToDelete = arrayOfSavedItems.find(item => item.id === deleteItemBtnId)) {
+                  indexOfItemToDelete = arrayOfSavedItems.findIndex(item => item.id === deleteItemBtnId);
+                  arrayOfSavedItems.splice(indexOfItemToDelete, 1);
+
+                  setCookie(arrayOfCookiesAndSavedItems);
+              };
+
+              if (itemToDelete = arrayOfCookiesAndSavedItems.find(item => item.id === deleteItemBtnId)) {
+                  indexOfItemToDelete = arrayOfCookiesAndSavedItems.findIndex(item => item.id === deleteItemBtnId);
+                  arrayOfCookiesAndSavedItems.splice(indexOfItemToDelete, 1);
 
                   setCookie(arrayOfCookiesAndSavedItems);
               };
